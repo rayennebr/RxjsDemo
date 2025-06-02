@@ -1,0 +1,25 @@
+<div class="card">
+  <p-table
+  [value]="userList"
+  [scrollable]="true"
+  scrollHeight="400px"
+  [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>phone</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
